@@ -1,4 +1,4 @@
-# bookly
+# bookish
 
 A new Flutter project.
 
