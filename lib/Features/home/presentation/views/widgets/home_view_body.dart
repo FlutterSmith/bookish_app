@@ -1,5 +1,6 @@
 import 'package:bookish/Features/home/presentation/views/widgets/custom_app_bar.dart';
 import 'package:bookish/Features/home/presentation/views/widgets/featured_books_list_view.dart';
+import 'package:bookish/constants.dart';
 import 'package:bookish/core/utils/assets.dart';
 import 'package:bookish/core/utils/styles.dart';
 import 'package:flutter/material.dart';
@@ -23,7 +24,10 @@ class HomeViewBody extends StatelessWidget {
           CustomAppBar(),
           FeaturedBooksListView(),
           SizedBox(height: 40),
-          Text('Best Seller', style: Styles.titleMedium),
+          Text(
+            'Best Seller',
+            style: Styles.textStyle20,
+          ),
           SizedBox(height: 10),
           BestSellerListViewItem(),
         ],
@@ -61,9 +65,9 @@ class BestSellerListViewItem extends StatelessWidget {
           ),
           const Column(
             children: [
-              Text('Harry Potter ', style: Styles.titleMedium),
-              Text('J.KRowling', style: Styles.titleMedium),
-              Text('19.99', style: Styles.titleMedium),
+              Text('Harry Potter ', style: Styles.textStyle24),
+              Text('J.KRowling', style: Styles.textStyle24),
+              Text('19.99', style: Styles.textStyle24),
             ],
           ),
         ],
