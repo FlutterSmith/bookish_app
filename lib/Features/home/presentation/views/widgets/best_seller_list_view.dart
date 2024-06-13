@@ -2,6 +2,8 @@ import 'package:bookish/constants.dart';
 import 'package:bookish/core/utils/assets.dart';
 import 'package:bookish/core/utils/styles.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class BestSellerListViewItem extends StatelessWidget {
   const BestSellerListViewItem({super.key});
@@ -30,33 +32,56 @@ class BestSellerListViewItem extends StatelessWidget {
           const SizedBox(
             width: 30,
           ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              SizedBox(
-                width: MediaQuery.of(context).size.width * 0.5,
-                child: Text(' Harry Potter and the Goblet of Fire ',
-                    maxLines: 2,
-                    overflow: TextOverflow.ellipsis,
-                    style: Styles.textStyle24.copyWith(
-                      fontFamily: kGTSectraFamily,
-                    )),
-              ),
-              const Text('J.K.Rowling', style: Styles.textStyle16),
-              Text('19.99  \u{20B9}',
-                  style:
-                      Styles.textStyle24.copyWith(fontWeight: FontWeight.bold)),
-            ],
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                SizedBox(
+                  width: MediaQuery.of(context).size.width * 0.5,
+                  child: Text(' Harry Potter and the Goblet of Fire ',
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
+                      style: Styles.textStyle20.copyWith(
+                        fontFamily: kGTSectraFamily,
+                      )),
+                ),
+                const Text('J.K.Rowling', style: Styles.textStyle16),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      '19.99  \u{20AC}',
+                      style: Styles.textStyle24.copyWith(
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    const BookRating(),
+                  ],
+                ),
+              ],
+            ),
           ),
-          const Row(
-            children: [
-              Icon(Icons.star, color: Colors.yellow),
-              SizedBox(width: 5),
-              Text('4.8', style: Styles.textStyle20),
-            ],
-          )
         ],
       ),
+    );
+  }
+}
+
+class BookRating extends StatelessWidget {
+  const BookRating({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return const Row(
+      children: [
+        Icon(FontAwesomeIcons.solidStar, color: Colors.yellow),
+        SizedBox(width: 6.3),
+        Text('4.8', style: Styles.textStyle20),
+        SizedBox(width: 5),
+        Text('(2000)', style: Styles.textStyle14),
+      ],
     );
   }
 }
