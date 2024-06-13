@@ -1,4 +1,5 @@
 import 'package:bookish/Features/home/presentation/views/widgets/best_seller_list_view.dart';
+import 'package:bookish/Features/home/presentation/views/widgets/best_seller_list_view_item.dart';
 import 'package:bookish/Features/home/presentation/views/widgets/custom_app_bar.dart';
 import 'package:bookish/Features/home/presentation/views/widgets/featured_books_list_view.dart';
 import 'package:bookish/constants.dart';
@@ -12,27 +13,34 @@ class HomeViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.only(
-        left: 20,
-        right: 10,
-        top: 10,
-        bottom: 20,
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          CustomAppBar(),
-          FeaturedBooksListView(),
-          SizedBox(height: 51),
-          Text(
-            'Best Seller',
-            style: Styles.textStyle20,
+    return const CustomScrollView(
+      physics: BouncingScrollPhysics(),
+      slivers: [
+        SliverToBoxAdapter(
+            child: Padding(
+          padding: EdgeInsets.only(
+            left: 20,
+            right: 10,
+            top: 10,
           ),
-          SizedBox(height: 20),
-          BestSellerListViewItem(),
-        ],
-      ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              CustomAppBar(),
+              FeaturedBooksListView(),
+              SizedBox(height: 30),
+              Text(
+                'Best Seller',
+                style: Styles.textStyle20,
+              ),
+              SizedBox(height: 20),
+            ],
+          ),
+        )),
+        SliverFillRemaining(
+          child: BestSellerListView(),
+        ),
+      ],
     );
   }
 }
