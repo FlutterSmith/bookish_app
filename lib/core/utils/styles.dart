@@ -20,7 +20,6 @@ abstract class Styles {
   static const textStyle24 = TextStyle(
     fontSize: 24,
     fontWeight: FontWeight.w600,
-    fontFamily: kGTSectraFamily,
   );
   static const textStyle30 = TextStyle(
     fontSize: 30,
