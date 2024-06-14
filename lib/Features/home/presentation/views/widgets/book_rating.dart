@@ -11,6 +11,7 @@ class BookRating extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Row(
+      
       children: [
         Icon(FontAwesomeIcons.solidStar, color: Colors.yellow),
         SizedBox(width: 6.3),
