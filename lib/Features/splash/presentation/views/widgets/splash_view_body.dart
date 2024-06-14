@@ -1,5 +1,6 @@
 import 'package:bookish/Features/home/presentation/views/home_view.dart';
 import 'package:bookish/Features/splash/presentation/views/widgets/sliding_text.dart';
+import 'package:bookish/core/utils/app_router.dart';
 import 'package:bookish/core/utils/assets.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -70,7 +71,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
         //     transition: Transition.fadeIn,
         //     duration: const Duration(seconds: 2),
         //   );
-        GoRouter.of(context).push('/homeView');
+        GoRouter.of(context).push(AppRouter.kHomeView);
       },
     );
   }
