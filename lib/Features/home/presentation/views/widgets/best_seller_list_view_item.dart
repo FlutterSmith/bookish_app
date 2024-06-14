@@ -49,7 +49,10 @@ class BestSellerListViewItem extends StatelessWidget {
                           fontFamily: kGTSectraFamily,
                         )),
                   ),
-                  const Text('J.K.Rowling', style: Styles.textStyle16),
+                  const Text(
+                    'J.K.Rowling',
+                    style: Styles.textStyle16,
+                  ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -59,7 +62,9 @@ class BestSellerListViewItem extends StatelessWidget {
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      const BookRating(),
+                      const BookRating(
+                        size: 20,
+                      ),
                     ],
                   ),
                 ],
