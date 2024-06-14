@@ -1,4 +1,5 @@
 import 'package:bookish/Features/home/presentation/views/widgets/custom_book_details_app_bar.dart';
+import 'package:bookish/Features/home/presentation/views/widgets/custom_book_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -7,6 +8,28 @@ class BookDetailsViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const CustomBookDetailsAppBar();
+    var width = MediaQuery.of(context).size.width;
+    return Padding(
+      padding: const EdgeInsets.only(
+        left: 20,
+        right: 20,
+        top: 40,
+        bottom: 20,
+      ),
+      child: Column(
+        children: [
+          const CustomBookDetailsAppBar(),
+          const SizedBox(height: 20),
+          Padding(
+            padding: EdgeInsets.only(
+              left: width * 0.22,
+              right: width * 0.22, 
+              bottom: 20,
+            ),
+            child: const CustomBookImage(),
+          ),
+        ],
+      ),
+    );
   }
 }

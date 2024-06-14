@@ -1,4 +1,4 @@
-import 'package:bookish/Features/home/presentation/views/widgets/custom_list_view_item.dart';
+import 'package:bookish/Features/home/presentation/views/widgets/custom_book_image.dart';
 import 'package:flutter/material.dart';
 
 class FeaturedBooksListView extends StatelessWidget {
@@ -12,9 +12,9 @@ class FeaturedBooksListView extends StatelessWidget {
         itemBuilder: (context, index) {
           return const Padding(
             padding: EdgeInsets.only(
-              right: 15 ,
+              right: 15,
             ),
-            child: FeaturedListViewItem(),
+            child: CustomBookImage(),
           );
         },
         itemCount: 10,
