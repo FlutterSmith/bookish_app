@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 abstract class Styles {
   static const textStyle14 = TextStyle(
     fontSize: 14,
-    fontWeight: FontWeight.normal,
+    fontWeight: FontWeight.w700,
     fontFamily: kMontserrat,
   );
   static const textStyle16 = TextStyle(
