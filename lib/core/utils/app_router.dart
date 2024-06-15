@@ -1,5 +1,6 @@
 import 'package:bookish/Features/home/presentation/views/book_details_view.dart';
 import 'package:bookish/Features/home/presentation/views/home_view.dart';
+import 'package:bookish/Features/search/presentation/views/search_view.dart';
 import 'package:bookish/Features/splash/presentation/views/splash_view.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -8,6 +9,8 @@ abstract class AppRouter {
   static const kSplashView = '/';
   static const kHomeView = '/homeView';
   static const kBookDetailsView = '/bookDetailsView';
+  static const kSearchView = '/searchView'; 
+
   static final GoRouter router = GoRouter(
     routes: <RouteBase>[
       GoRoute(
@@ -33,6 +36,11 @@ abstract class AppRouter {
         path: kBookDetailsView,
         builder: (context, state) => const BookDetailsView(),
       ),
+      GoRoute(
+        path: kSearchView,
+        builder: (context, state) => const SearchView(),
+      ),
+
     ],
   );
 }
