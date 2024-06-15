@@ -1,3 +1,4 @@
+import 'package:bookish/constants.dart';
 import 'package:bookish/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
@@ -29,7 +30,7 @@ class CustomButton extends StatelessWidget {
         ),
         child: Text(
           text,
-          style: Styles.textStyle24.copyWith(
+          style: Styles.textStyle18.copyWith(
             color: textColor,
             fontWeight: FontWeight.w900,
           ),
