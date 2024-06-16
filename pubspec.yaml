@@ -29,10 +29,10 @@ environment:
 # versions available, run `flutter pub outdated`.
 dependencies:
   cupertino_icons: ^1.0.6
+  equatable: ^2.0.5
   flutter:
     sdk: flutter
   font_awesome_flutter: ^10.7.0
-  
   go_router: ^14.1.4
   google_fonts: ^6.2.1
 
