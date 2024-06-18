@@ -5,8 +5,8 @@ import 'package:bookish/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-class BestSellerListViewItem extends StatelessWidget {
-  const BestSellerListViewItem({super.key});
+class NewestListViewItem extends StatelessWidget {
+  const NewestListViewItem({super.key});
 
   @override
   Widget build(BuildContext context) {

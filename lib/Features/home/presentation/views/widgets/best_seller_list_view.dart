@@ -3,8 +3,8 @@ import 'package:bookish/core/utils/app_router.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-class BestSellerListView extends StatelessWidget {
-  const BestSellerListView({super.key});
+class NewestListView extends StatelessWidget {
+  const NewestListView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +21,7 @@ class BestSellerListView extends StatelessWidget {
         ),
         child: ListView.builder(
           itemBuilder: (context, index) {
-            return const BestSellerListViewItem();
+            return const NewestListViewItem();
           },
           itemCount: 10,
           physics: const NeverScrollableScrollPhysics(),
