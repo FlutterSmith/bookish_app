@@ -3,6 +3,7 @@ import 'package:bookish/Features/home/data/repos/home_repo.dart';
 import 'package:bookish/core/errors/failure.dart';
 import 'package:bookish/core/utils/api_service.dart';
 import 'package:dartz/dartz.dart';
+import 'package:dio/dio.dart';
 
 class HomeRepoImpl implements HomeRepo {
   @override
@@ -18,13 +19,14 @@ class HomeRepoImpl implements HomeRepo {
       List<BookModel> result = [];
       for (var item in data['items']) {
         result.add(BookModel.fromJson(item));
-
-
-        
       }
       return right(result);
     } catch (e) {
-      return left(ServerFailure());
+      if (e is DioException) {
+        return left(ServerFailure.fromDioException(e));
+      }
+
+      return left(ServerFailure(e.toString()));
     }
   }
 
