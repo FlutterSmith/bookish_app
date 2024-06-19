@@ -1,11 +1,6 @@
-import 'package:bookish/Features/home/presentation/views/widgets/book_rating.dart';
-import 'package:bookish/Features/home/presentation/views/widgets/books_action.dart';
 import 'package:bookish/Features/home/presentation/views/widgets/books_details_section_one.dart';
 import 'package:bookish/Features/home/presentation/views/widgets/custom_book_details_app_bar.dart';
-import 'package:bookish/Features/home/presentation/views/widgets/custom_book_image.dart';
-import 'package:bookish/Features/home/presentation/views/widgets/similar_books_list_view.dart';
 import 'package:bookish/Features/home/presentation/views/widgets/similar_books_section_two.dart';
-import 'package:bookish/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
