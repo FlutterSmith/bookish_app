@@ -19,7 +19,7 @@ class BookDetailsSectionOne extends StatelessWidget {
             right: width * 0.22,
             bottom: 20,
           ),
-          child: const CustomBookImage(),
+          child: const CustomBookImage(imageUrl: 'https://media.istockphoto.com/id/1411701868/photo/magic-book-with-glitter-open-book-with-lights-glowing-in-dark-background.webp?b=1&s=170667a&w=0&k=20&c=YRAsEE8YSqO_oMc0vtFDcIFrEO-t3yDoN_MkJ51PAlY=',),
         ),
         const Text(
           'The Jungle Book',

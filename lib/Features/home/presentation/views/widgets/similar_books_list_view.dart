@@ -14,7 +14,7 @@ class SimilarBooksListView extends StatelessWidget {
             padding: EdgeInsets.only(
               right: 10,
             ),
-            child: CustomBookImage(),
+            child: CustomBookImage(imageUrl: 'https://media.istockphoto.com/id/1411701868/photo/magic-book-with-glitter-open-book-with-lights-glowing-in-dark-background.webp?b=1&s=170667a&w=0&k=20&c=YRAsEE8YSqO_oMc0vtFDcIFrEO-t3yDoN_MkJ51PAlY=',),
           );
         },
         itemCount: 10,
