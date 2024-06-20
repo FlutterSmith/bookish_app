@@ -20,7 +20,6 @@ class SimilarBooksListView extends StatelessWidget {
         itemCount: 10,
         scrollDirection: Axis.horizontal,
         physics: const BouncingScrollPhysics(),
-        shrinkWrap: true,
       ),
     );
   }
