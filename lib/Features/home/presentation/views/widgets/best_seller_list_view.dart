@@ -23,7 +23,7 @@ class NewestListView extends StatelessWidget {
           itemBuilder: (context, index) {
             return const NewestListViewItem();
           },
-          itemCount: 10,
+          itemCount: 20,
           physics: const NeverScrollableScrollPhysics(),
           padding: EdgeInsets.zero,
         ),
