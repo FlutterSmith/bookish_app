@@ -8,13 +8,13 @@ import 'package:dio/dio.dart';
 class HomeRepoImpl implements HomeRepo {
   @override
   final ApiService apiService;
+
   HomeRepoImpl(this.apiService);
   @override
   Future<Either<Failure, List<BookModel>>> getNewestBooks() async {
     try {
       var data = await apiService.getBooks(
-          endPoint:
-              'volumes?Filtering=free-ebooks&q=subject:programming&Sorting=newest');
+          endPoint: 'volumes?Filtering=free-ebooks&q=subject:programming ');
 
       List<BookModel> result = [];
       for (var item in data['items']) {

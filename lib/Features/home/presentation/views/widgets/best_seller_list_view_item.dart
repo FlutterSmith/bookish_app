@@ -1,12 +1,18 @@
+import 'package:bookish/Features/home/data/models/book_model/book_model.dart';
 import 'package:bookish/Features/home/presentation/views/widgets/book_rating.dart';
 import 'package:bookish/constants.dart';
-import 'package:bookish/core/utils/assets.dart';
 import 'package:bookish/core/utils/styles.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class NewestListViewItem extends StatelessWidget {
-  const NewestListViewItem({super.key});
+  const NewestListViewItem({
+    super.key,
+    required this.bookModel,
+  });
+
+  final BookModel bookModel;
 
   @override
   Widget build(BuildContext context) {
@@ -20,17 +26,18 @@ class NewestListViewItem extends StatelessWidget {
           children: [
             AspectRatio(
               aspectRatio: 2.4 / 3.9,
-              child: Container(
-                decoration: const BoxDecoration(
-                  borderRadius: BorderRadius.all(Radius.circular(8)),
-                  color: Colors.red,
-                  image: DecorationImage(
-                    image: AssetImage(
-                      AssetsData.testImage2,
+              child: CachedNetworkImage(
+                imageUrl: bookModel.volumeInfo.imageLinks.thumbnail,
+                imageBuilder: (context, imageProvider) => Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(12),
+                    image: DecorationImage(
+                      image: imageProvider,
+                      fit: BoxFit.fill,
                     ),
-                    fit: BoxFit.fill,
                   ),
                 ),
+                errorWidget: (context, url, error) => const Icon(Icons.error),
               ),
             ),
             const SizedBox(
@@ -42,27 +49,30 @@ class NewestListViewItem extends StatelessWidget {
                 children: [
                   SizedBox(
                     width: MediaQuery.of(context).size.width * 0.5,
-                    child: Text(' Harry Potter and the Goblet of Fire ',
+                    child: Text(bookModel.volumeInfo.title!,
                         maxLines: 2,
                         overflow: TextOverflow.ellipsis,
                         style: Styles.textStyle20.copyWith(
                           fontFamily: kGTSectraFamily,
                         )),
                   ),
-                  const Text(
-                    'J.K.Rowling',
+                  Text(
+                    bookModel.volumeInfo.authors![0],
                     style: Styles.textStyle16,
+                    overflow: TextOverflow.ellipsis,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        '19.99  \u{20AC}',
+                        'Free',
                         style: Styles.textStyle24.copyWith(
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      const BookRating(
+                      BookRating(
+                        rating: bookModel.volumeInfo.averageRaing ?? 0,
+                        ratingCount: bookModel.volumeInfo.ratingsCount ?? 0,
                         size: 20,
                       ),
                     ],
