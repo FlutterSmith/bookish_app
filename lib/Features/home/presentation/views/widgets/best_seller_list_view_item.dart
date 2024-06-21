@@ -27,7 +27,7 @@ class NewestListViewItem extends StatelessWidget {
             AspectRatio(
               aspectRatio: 2.4 / 3.9,
               child: CachedNetworkImage(
-                imageUrl: bookModel.volumeInfo.imageLinks.thumbnail,
+                imageUrl: bookModel.volumeInfo.imageLinks?.thumbnail ?? '',
                 imageBuilder: (context, imageProvider) => Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(12),
@@ -57,7 +57,7 @@ class NewestListViewItem extends StatelessWidget {
                         )),
                   ),
                   Text(
-                    bookModel.volumeInfo.authors![0],
+                    bookModel.volumeInfo.authors?[0] ?? 'No author',
                     style: Styles.textStyle16,
                     overflow: TextOverflow.ellipsis,
                   ),
