@@ -1,6 +1,5 @@
 import 'package:bookish/Features/home/presentation/views/book_details_view.dart';
 import 'package:bookish/Features/home/presentation/views/home_view.dart';
-import 'package:bookish/Features/search/presentation/views/search_view.dart';
 import 'package:bookish/Features/splash/presentation/views/splash_view.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';

@@ -14,7 +14,7 @@ class HomeRepoImpl implements HomeRepo {
   Future<Either<Failure, List<BookModel>>> getNewestBooks() async {
     try {
       var data = await apiService.getBooks(
-          endPoint: 'volumes?Filtering=free-ebooks&q=subject:programming ');
+          endPoint: 'volumes?Filtering=free-ebooks&q=computer science');
 
       List<BookModel> result = [];
       for (var item in data['items']) {

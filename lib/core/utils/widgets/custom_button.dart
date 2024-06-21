@@ -1,4 +1,3 @@
-import 'package:bookish/constants.dart';
 import 'package:bookish/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
