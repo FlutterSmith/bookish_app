@@ -10,6 +10,6 @@ abstract class HomeRepo {
 
   Future<Either<Failure, List<BookModel>>> getFeaturedBooks();
 
-  Future<Either<Failure, List<BookModel>>> getSimilarBooks({required String category});
-
+  Future<Either<Failure, List<BookModel>>> getSimilarBooks(
+      {required String category});
 }

@@ -54,7 +54,7 @@
 //         ),
 //         child: ListView.builder(
 //           itemBuilder: (context, index) {
-//             return const NewestListViewItem();
+//             return const NewestListViewItem(bookModel: state.books.[index] ,);
 //           },
 //           itemCount: 10,
 //           padding: EdgeInsets.zero,
