@@ -17,17 +17,18 @@ class SimilarBooksListView extends StatelessWidget {
             height: MediaQuery.of(context).size.height * 0.15,
             child: ListView.builder(
               itemBuilder: (context, index) {
-                return const Padding(
-                  padding: EdgeInsets.only(
+                return Padding(
+                  padding: const EdgeInsets.only(
                     right: 10,
                   ),
                   child: CustomBookImage(
                     imageUrl:
-                        'https://media.istockphoto.com/id/1411701868/photo/magic-book-with-glitter-open-book-with-lights-glowing-in-dark-background.webp?b=1&s=170667a&w=0&k=20&c=YRAsEE8YSqO_oMc0vtFDcIFrEO-t3yDoN_MkJ51PAlY=',
+                        state.books[index].volumeInfo.imageLinks?.thumbnail ??
+                            '',
                   ),
                 );
               },
-              itemCount: 10,
+              itemCount: state.books.length,
               scrollDirection: Axis.horizontal,
               physics: const BouncingScrollPhysics(),
             ),
