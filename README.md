@@ -1,6 +1,6 @@
 # Bookish App 📚
 
-![Bookish App Banner]([https://ibb.co/QbZcxdp](https://github.com/FlutterSmith/bookish_app/blob/main/assets/images/58dbed6843a651d0285185b4a22e1070.png?raw=true))
+![Bookish App Banner](https://github.com/FlutterSmith/bookish_app/blob/main/assets/images/58dbed6843a651d0285185b4a22e1070.png?raw=true)
 
 ## Introduction
 
