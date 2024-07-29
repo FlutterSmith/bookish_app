@@ -17,11 +17,11 @@
 
 ### Home Screen
 
-![Home Screen](https://ibb.co/VJxyVtP)
+![Home Screen](https://github.com/FlutterSmith/bookish_app/blob/main/assets/images/photo_2024-07-29_17-22-07.jpg?raw=true)
 
 ### Book Details
 
-![Book Details](https://ibb.co/3RXFscS)
+![Book Details](https://github.com/FlutterSmith/bookish_app/blob/main/assets/images/photo_2024-07-29_17-22-06.jpg?raw=true)
 
 ## Getting Started
 
